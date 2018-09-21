@@ -12,5 +12,28 @@ client.on('message', msg => {
 });
 
 
+client.on('message', message => {
+    if (message.content === "-نجرب") {
+        if(!message.channel.guild) return;
+        message.member.addRole(message.guild.roles.find("name", "جربتها"));
+  }
+    
+});  
+
+
+
+
+client.on('message', message => {
+     if (message.content === "-نجرب") {
+     let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setColor("#9B59B6")
+  .addField(" Done Activation | 🎮 تــــم تفعيل" , " |  تــــم تفعيل العبه")
+     
+     
+     
+  message.channel.sendEmbed(embed);
+    }
+});
 
 client.login(process.env.BOT_TOKEN);
