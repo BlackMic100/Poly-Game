@@ -13,7 +13,7 @@ client.on('message', msg => {
 
 
 client.on('message', message => {
-    if (message.content === "-نجرب") {
+    if (message.content === "نجرب") {
         if(!message.channel.guild) return;
         message.member.addRole(message.guild.roles.find("name", "جربتها"));
   }
@@ -24,7 +24,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-     if (message.content === "-نجرب") {
+     if (message.content === "نجرب") {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
